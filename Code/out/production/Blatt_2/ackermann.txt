@@ -1,0 +1,43 @@
+# init
+
+# n
+inp 1
+# m
+inp 2
+# stack end index
+ldk 4
+sta 3
+
+# loop start
+lda 1
+jez 25
+lda 2
+jez 38
+
+# else
+    ldk -1
+    add 1
+    sti 3
+    inc 3
+    dec 2
+    jmp 11
+
+# if n = 0
+    inc 2
+    ldk -4
+    add 3
+    jne 33
+    # if stack is empty
+        out 2
+        hlt 99
+    # else
+        ldi 3
+        sta 1
+        dec 3
+    jmp 11
+
+# if m = 0
+    dec 1
+    ldk 1
+    sta 2
+    jmp 11

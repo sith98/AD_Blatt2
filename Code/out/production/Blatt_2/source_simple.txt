@@ -1,0 +1,17 @@
+# Init
+INP 1
+
+# Loop Start
+LDA 1
+JLZ 14
+    MUL 1
+    ADD 2
+    STA 2
+    LDK -1
+    ADD 1
+    STA 1
+JMP 4
+# Loop End
+
+OUT 2
+HLT 999

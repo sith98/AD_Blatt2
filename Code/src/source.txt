@@ -1,0 +1,22 @@
+# Init
+INP 1
+LDK 0
+# index
+STA 2
+# sum
+STA 3
+# Start Loop
+LDA 1
+SUB 2
+JLZ 20
+    LDA 2
+    MUL 2
+    ADD 3
+    STA 3
+    LDK 1
+    ADD 2
+    STA 2
+JMP 8
+# end of loop
+OUT 3
+HLT 99
